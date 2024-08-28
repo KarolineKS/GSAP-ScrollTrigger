@@ -27,29 +27,19 @@
       const nft03 = document.querySelector('.nft-03');
       const nft04 = document.querySelector('.nft-04');
 
-      gsap.to(nft01, {
-        x: -420,
-        duration: 3,
-        ease: 'bounce.out',
-      });
+      const startAnimation = (elem, xPosition) => {
+        gsap.to(elem, {
+          x: xPosition,
+          duration: 3,
+          ease: 'bounce.out',
+        });
+      };
 
-      gsap.to(nft02, {
-        x: -125,
-        duration: 3,
-        ease: 'bounce.out',
-      });
+      startAnimation(nft01, -420)
+      startAnimation(nft02, -125)
+      startAnimation(nft03, 125)
+      startAnimation(nft04, 420)
 
-      gsap.to(nft03, {
-        x: 125,
-        duration: 3,
-        ease: 'bounce.out',
-      });
-
-      gsap.to(nft04, {
-        x: 420,
-        duration: 3,
-        ease: 'bounce.out',
-      });
     </script>
   </body>
 </html>
