@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GSAP - ScrollTrigger</title>
-</head>
-<body>
-  <h1>Hello Word</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP - ScrollTrigger</title>
+    <link rel="stylesheet" href="./scss/main.css" />
+  </head>
+
+  <body>
+    <section class="s-nfts js-section-nft">
+      <div>
+        <img class="nft-01" src="./imgs/nft-01.png" alt="Nft 01">
+        <img class="nft-02" src="./imgs/nft-02.png" alt="Nft 02">
+        <img class="nft-03" src="./imgs/nft-03.png" alt="Nft 03">
+        <img class="nft-04" src="./imgs/nft-04.png" alt="Nft 04">
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script>
+      const sectionNFT = document.querySelector(".js-section-nft");
+
+      const nft01 = document.querySelector(".nft-01");
+      const nft02 = document.querySelector(".nft-02");
+      const nft03 = document.querySelector(".nft-03");
+      const nft04 = document.querySelector(".nft-04");
+
+    </script>
+  </body>
+
 </html>
