@@ -8,6 +8,11 @@
   </head>
 
   <body>
+
+    <section class="s-other"> 
+      Aqui é uma Section Top 
+    </section>
+
     <section class="s-nfts js-section-nft">
       <div>
         <img class="nft-01" src="./imgs/nft-01.png" alt="Nft 01" />
@@ -17,7 +22,12 @@
       </div>
     </section>
 
+    <section class="s-other">
+      Aqui é uma Section Bottom 
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
     <script>
       const sectionNFT = document.querySelector('.js-section-nft');
@@ -30,8 +40,13 @@
       const startAnimation = (elem, xPosition) => {
         gsap.to(elem, {
           x: xPosition,
-          duration: 3,
-          ease: 'bounce.out',
+          scrollTrigger: {
+            trigger: sectionNFT,
+            start: "top center",
+            end: "bottom center",
+            markers: true,
+            scrub: true,
+          }
         });
       };
 
